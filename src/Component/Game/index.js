@@ -180,6 +180,5 @@ const styles = StyleSheet.create({
     tilO: {
         color: "green",
         fontSize: 60,
-
     }
 });
