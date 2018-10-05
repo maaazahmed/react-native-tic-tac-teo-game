@@ -1,0 +1,3 @@
+rootProject.name = 'ticTackReo'
+
+include ':app'
