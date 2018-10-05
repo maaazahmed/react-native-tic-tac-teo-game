@@ -1,8 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, { Component } from 'react';
 import {
@@ -111,7 +106,7 @@ export default class Game extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {/* 1ST ROW */}
+               
                 <View style={{ flexDirection: "row" }} >
                     <TouchableOpacity onPress={() => this.onTilePress(0, 0)}
                      style={[styles.box, { borderTopWidth: 0, borderLeftWidth: 0, }]} >
@@ -125,7 +120,7 @@ export default class Game extends Component {
                     </TouchableOpacity>
                 </View>
 
-                {/* 2ND ROW */}
+               
                 <View style={{ flexDirection: "row" }} >
                     <TouchableOpacity onPress={() => this.onTilePress(1, 0)} style={[styles.box, { borderLeftWidth: 0, }]} >
                         {this.renderIcon(1, 0)}
@@ -138,7 +133,7 @@ export default class Game extends Component {
                     </TouchableOpacity>
                 </View>
 
-                {/* 3RD ROW */}
+              
                 <View style={{ flexDirection: "row" }} >
                     <TouchableOpacity onPress={() => this.onTilePress(2, 0)} style={[styles.box, { borderLeftWidth: 0, borderBottomWidth: 0 }]} >
                         {this.renderIcon(2, 0)}
@@ -188,4 +183,3 @@ const styles = StyleSheet.create({
 
     }
 });
-{/* <ion-icon name="radio-button-off"></ion-icon> */ }
