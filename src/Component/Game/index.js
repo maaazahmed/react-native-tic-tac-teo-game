@@ -88,6 +88,7 @@ export default class Game extends Component {
             this.winnerAnimatedViw()
             this.initializeGame()
         }
+        var asd = this.state.gameState;
     }
 
     getWinner = () => {
@@ -103,18 +104,9 @@ export default class Game extends Component {
                 return -1
             }
 
-            for (let i = 0; i < 3; i++) {
-                sum = arr[0][i] + arr[1][i] + arr[2][i]
-                if (sum === 3) {
-                    return 1;
-                }
-                else if (sum === -3) {
-                    return -1
-                }
-            }
         }
         for (let i = 0; i < 3; i++) {
-            sum = arr[i][0] + arr[i][1] + arr[i][2];
+            sum = arr[0][i] + arr[1][i] + arr[2][i]
             if (sum === 3) {
                 return 1;
             }
@@ -122,6 +114,7 @@ export default class Game extends Component {
                 return -1
             }
         }
+
         sum = arr[0][0] + arr[1][1] + arr[2][2];
         if (sum === 3) {
             return 1;
@@ -233,7 +226,7 @@ export default class Game extends Component {
                             </View>}
                         <View style={{ marginTop: "10%" }} >
                             <TouchableOpacity activeOpacity={0.6} onPress={() => { this.newGame() }} >
-                                <Icon name="refresh" style={[styles.tilX, { fontSize: 80, color: "#fff" }]} />
+                                <Icon name="refresh" style={[styles.tilX, { fontSize: 50, color: "#fff" }]} />
                             </TouchableOpacity>
                         </View>
 
