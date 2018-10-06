@@ -4,7 +4,6 @@ import {
     Text,
     View,
     TouchableOpacity,
-    Alert,
     Animated,
     Easing
 } from 'react-native';
@@ -77,19 +76,15 @@ export default class Game extends Component {
         let winner = this.getWinner()
         if (winner === 1) {
             this.setState({
-                // isAlert: true,
                 gameWinner: 1
             })
-            // alert("X Winner")
             this.initializeGame()
             this.winnerAnimatedViw()
         }
         if (winner === -1) {
             this.setState({
-                // isAlert: true,
                 gameWinner: -1
             })
-            // alert("O Winner")
             this.winnerAnimatedViw()
             this.initializeGame()
         }
@@ -143,12 +138,6 @@ export default class Game extends Component {
         }
     }
 
-
-
-
-
-
-
     winnerAnimatedViw = () => {
         Animated.sequence([
             Animated.timing(this.state.winnerAlert, {
@@ -170,9 +159,6 @@ export default class Game extends Component {
             })
         ]).start()
     }
-
-
-
 
     newGame = () => {
         this.initializeGame()
@@ -197,13 +183,6 @@ export default class Game extends Component {
         this.setState({ isAlert: false })
     }
 
-
-
-
-
-
-
-
     render() {
         const opacity = this.state.winnerAlert.interpolate({
             inputRange: [0, 1],
@@ -221,7 +200,6 @@ export default class Game extends Component {
             inputRange: [0, 1],
             outputRange: [50, 2]
         })
-
 
 
         return (
@@ -303,7 +281,6 @@ export default class Game extends Component {
                         </View>
                     </View>
                 </View>
-                {/* } */}
                 <TouchableOpacity
                     activeOpacity={0.6}
                     onPress={() => { this.newGame() }}
